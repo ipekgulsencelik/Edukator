@@ -6,11 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
-    <Folder Include="EntityFramework\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
 </Project>
