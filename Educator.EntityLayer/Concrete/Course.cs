@@ -8,5 +8,9 @@
         public string ImageURL { get; set; }
         public decimal Price { get; set; }
         public int Review { get; set; }
+
+        // one to many relation
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
     }
 }
