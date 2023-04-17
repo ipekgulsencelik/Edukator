@@ -14,6 +14,7 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<ContactInformation> ContactInformations { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
     }
 }
