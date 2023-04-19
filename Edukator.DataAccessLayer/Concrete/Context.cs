@@ -18,5 +18,6 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
     }
 }
