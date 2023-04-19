@@ -1,7 +1,6 @@
-﻿using Edukator.DataAccessLayer.Abstract;
-using Edukator.EntityLayer.Concrete;
+﻿using Edukator.EntityLayer.Concrete;
 
-namespace Edukator.DataAccessLayer.Concrete
+namespace Edukator.DataAccessLayer.Abstract
 {
     public interface ITestimonialDAL : IGenericDAL<Testimonial>
     {

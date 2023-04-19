@@ -1,3 +1,9 @@
+using Edukator.BussinessLayer.Abstract;
+using Edukator.BussinessLayer.Concrete;
+using Edukator.DataAccessLayer.Abstract;
+using Edukator.DataAccessLayer.Concrete;
+using Edukator.DataAccessLayer.EntityFramework;
+
 namespace Edukator.PresentationLayer
 {
     public class Program
@@ -5,6 +11,11 @@ namespace Edukator.PresentationLayer
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<Context>();
+
+            builder.Services.AddScoped<ICategoryDAL, EFCategoryDAL>();
+            builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
