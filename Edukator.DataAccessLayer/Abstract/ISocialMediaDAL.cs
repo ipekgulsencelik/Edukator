@@ -2,7 +2,7 @@
 
 namespace Edukator.DataAccessLayer.Abstract
 {
-    public interface IMapDAL : IGenericDAL<Map>
+    public interface ISocialMediaDAL : IGenericDAL<SocialMedia>
     {
     }
 }
