@@ -1,0 +1,28 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Category>
+
+@{
+    Layout = null;
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Category Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CategoryName</td>
+            </tr>
+        }
+    </table>
+    <a href="#" class="btn btn-outline-primary">Create New Category</a>
+</div>
