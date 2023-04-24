@@ -17,6 +17,15 @@ namespace Edukator.PresentationLayer
             builder.Services.AddScoped<ICategoryDAL, EFCategoryDAL>();
             builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
+            builder.Services.AddScoped<ICourseDAL, EFCourseDAL>();
+            builder.Services.AddScoped<ICourseService, CourseManager>();
+
+            builder.Services.AddScoped<IContactDAL, EFContactDAL>();
+            builder.Services.AddScoped<IContactService, ContactManager>();
+
+            builder.Services.AddScoped<IAboutDAL, EFAboutDAL>();
+            builder.Services.AddScoped<IAboutService, AboutManager>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
