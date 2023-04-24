@@ -1,0 +1,30 @@
+﻿@model List<Edukator.EntityLayer.Concrete.Course>
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CourseID</td>
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td>@item.CategoryID</td>
+            <td><a href="#" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="#" class="btn btn-outline-success">Update</a></td>
+        </tr>
+    }
+</table>
+<a href="#" class="btn btn-outline-primary">Create New Course</a>
