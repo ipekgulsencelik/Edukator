@@ -20,6 +20,9 @@ namespace Edukator.PresentationLayer
             builder.Services.AddScoped<ICourseDAL, EFCourseDAL>();
             builder.Services.AddScoped<ICourseService, CourseManager>();
 
+            builder.Services.AddScoped<ISocialMediaDAL, EFSocialMediaDAL>();
+            builder.Services.AddScoped<ISocialMediaService, SocialMediaManager>();
+
             builder.Services.AddScoped<IContactDAL, EFContactDAL>();
             builder.Services.AddScoped<IContactService, ContactManager>();
 

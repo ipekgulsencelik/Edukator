@@ -2,6 +2,7 @@
 
 @{
     Layout = null;
+    int count = 0;
 }
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -17,8 +18,9 @@
     </tr>
     @foreach (var item in Model)
     {
+        count++;
         <tr>
-            <td>@item.CourseID</td>
+            <td>@count</td>
             <td>@item.Title</td>
             <td>@item.Price</td>
             <td>@item.CategoryID</td>

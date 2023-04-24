@@ -3,8 +3,9 @@
     public class SocialMedia
     {
         public int SocialMediaID { get; set; }
-        public string SocialMediaName { get; set; }
-        public string SocialMediaIcon { get; set; }
-        public string SocialMediaURL { get; set; }
+        public string? SocialMediaName { get; set; }
+        public string? SocialMediaIcon { get; set; }
+        public string? SocialMediaURL { get; set; }
+        public bool Status { get; set; }
     }
 }
