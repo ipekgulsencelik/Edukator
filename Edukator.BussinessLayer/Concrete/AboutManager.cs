@@ -4,11 +4,11 @@ using Edukator.EntityLayer.Concrete;
 
 namespace Edukator.BussinessLayer.Concrete
 {
-    public class ServiceManager : IServiceService
+    public class AboutManager : IAboutService
     {
-        private readonly IServiceDAL _serviceDAL;
+        private readonly IAboutDAL _serviceDAL;
 
-        public ServiceManager(IServiceDAL serviceDAL)
+        public AboutManager(IAboutDAL serviceDAL)
         {
             _serviceDAL = serviceDAL;
         }

@@ -1,4 +1,4 @@
-﻿using Edukator.DataAccessLayer.Concrete;
+﻿using Edukator.DataAccessLayer.Abstract;
 using Edukator.DataAccessLayer.Repository;
 using Edukator.EntityLayer.Concrete;
 
