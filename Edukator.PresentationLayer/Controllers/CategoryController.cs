@@ -1,4 +1,5 @@
 ﻿using Edukator.BussinessLayer.Abstract;
+using Edukator.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Edukator.PresentationLayer.Controllers
@@ -16,6 +17,41 @@ namespace Edukator.PresentationLayer.Controllers
         {
             var values = _categoryService.TGetList();
             return View(values);
+        }
+
+        [HttpGet]
+        public IActionResult AddCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddCategory(Category category)
+        {
+            //List<>
+            _categoryService.TInsert(category);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteCategory(int id)
+        {
+            var value = _categoryService.TGetByID(id);
+            _categoryService.TDelete(value);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateCategory(int id)
+        {
+            var value = _categoryService.TGetByID(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateCategory(Category category)
+        {
+            _categoryService.TUpdate(category);
+            return RedirectToAction("Index");
         }
     }
 }

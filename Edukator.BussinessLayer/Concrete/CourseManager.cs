@@ -28,6 +28,11 @@ namespace Edukator.BussinessLayer.Concrete
             return _courseDAL.GetList();
         }
 
+        public List<Course> TGetCoursesWithCategory()
+        {
+            return _courseDAL.GetCoursesWithCategory();
+        }
+
         public void TInsert(Course entity)
         {
            _courseDAL.Insert(entity);
