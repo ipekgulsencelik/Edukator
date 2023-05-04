@@ -3,6 +3,7 @@ using Edukator.BussinessLayer.Concrete;
 using Edukator.DataAccessLayer.Abstract;
 using Edukator.DataAccessLayer.Concrete;
 using Edukator.DataAccessLayer.EntityFramework;
+using Edukator.EntityLayer.Concrete;
 
 namespace Edukator.PresentationLayer
 {
@@ -28,6 +29,8 @@ namespace Edukator.PresentationLayer
 
             builder.Services.AddScoped<IAboutDAL, EFAboutDAL>();
             builder.Services.AddScoped<IAboutService, AboutManager>();
+
+            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

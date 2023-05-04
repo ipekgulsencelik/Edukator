@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Edukator.DataAccessLayer.Concrete
 {
-    public class Context : IdentityDbContext
+    public class Context : IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
