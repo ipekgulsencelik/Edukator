@@ -30,6 +30,12 @@ namespace Edukator.PresentationLayer
             builder.Services.AddScoped<IAboutDAL, EFAboutDAL>();
             builder.Services.AddScoped<IAboutService, AboutManager>();
 
+            builder.Services.AddScoped<IFeatureDAL, EFFeatureDAL>();
+            builder.Services.AddScoped<IFeatureService, FeatureManager>();
+
+            builder.Services.AddScoped<IServiceDAL, EFServiceDAL>();
+            builder.Services.AddScoped<IServiceService, ServiceManager>();
+
             builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
 
             // Add services to the container.
