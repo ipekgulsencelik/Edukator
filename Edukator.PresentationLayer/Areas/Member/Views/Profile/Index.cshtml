@@ -1,0 +1,29 @@
+﻿@model Edukator.EntityLayer.Concrete.AppUser
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/MemberLayout/Index.cshtml";
+}
+
+<label>Name</label>
+<input type="text" class="form-control" asp-for="Name" />
+<br />
+<label>Surname</label>
+<input type="text" class="form-control" asp-for="Surname" />
+<br />
+<label>User Name</label>
+<input type="text" class="form-control" asp-for="UserName" />
+<br />
+<label>Mail Address</label>
+<input type="text" class="form-control" asp-for="Email" />
+<br />
+<label>City</label>
+<input type="text" class="form-control" asp-for="City" />
+<br />
+<label>Image</label>
+<input type="file" class="form-control" asp-for="ImageURL" />
+<br />
+<label>Password</label>
+<input type="text" class="form-control" />
+<br />
+<button class="btn btn-success">Update Information</button>

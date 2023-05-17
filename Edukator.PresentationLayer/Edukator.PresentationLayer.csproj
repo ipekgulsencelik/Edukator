@@ -30,7 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Login\" />
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
   </ItemGroup>
 
 </Project>

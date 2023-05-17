@@ -5,5 +5,6 @@ namespace Edukator.DataAccessLayer.Abstract
     public interface ICourseRegisterDAL : IGenericDAL<CourseRegister>
     {
         List<CourseRegister> CourseRegisterListWithCoursesAndUsers();
+        List<CourseRegister> CourseRegisterListWithCourseByUser(int id);
     }
 }

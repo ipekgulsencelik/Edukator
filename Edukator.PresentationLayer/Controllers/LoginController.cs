@@ -27,8 +27,8 @@ namespace Edukator.PresentationLayer.Controllers
 			
 			if (result.Succeeded)
 			{
-				return RedirectToAction("Index", "Course");
-			}
+                return RedirectToAction("Index", "MyCourse", new { area = "Member" });
+            }
 		
 			return View();
 		}

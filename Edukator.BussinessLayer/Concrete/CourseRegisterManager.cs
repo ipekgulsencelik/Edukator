@@ -1,5 +1,6 @@
 ﻿using Edukator.BussinessLayer.Abstract;
 using Edukator.DataAccessLayer.Abstract;
+using Edukator.DataAccessLayer.EntityFramework;
 using Edukator.EntityLayer.Concrete;
 
 namespace Edukator.BussinessLayer.Concrete
@@ -11,6 +12,11 @@ namespace Edukator.BussinessLayer.Concrete
         public CourseRegisterManager(ICourseRegisterDAL courseRegisterDAL)
         {
             _courseRegisterDAL = courseRegisterDAL ;
+        }
+
+        public List<CourseRegister> TCourseRegisterListWithCourseByUser(int id)
+        {
+            return _courseRegisterDAL.CourseRegisterListWithCourseByUser(id);
         }
 
         public List<CourseRegister> TCourseRegisterListWithCoursesAndUsers()

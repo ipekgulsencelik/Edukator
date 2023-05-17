@@ -1,0 +1,22 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>User Name</label>
+        <input type="text" class="form-control" asp-for="Username" />
+        <br />
+        <label>Password</label>
+        <input type="password" class="form-control" asp-for="Password" />
+        <br />
+        <button class="btn btn-warning">LogIn</button>
+    </form>
+</div>
+
