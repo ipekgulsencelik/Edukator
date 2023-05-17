@@ -29,4 +29,8 @@
     <ProjectReference Include="..\Edukator.DataTransferObjectLayer\Edukator.DataTransferObjectLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+
 </Project>

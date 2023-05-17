@@ -42,5 +42,10 @@ namespace Edukator.BussinessLayer.Concrete
         {
             _courseDAL.Update(entity);
         }
+
+        public List<Course> TGetLastFiveCourse()
+        {
+            return _courseDAL.GetLastFiveCourse();
+        }
     }
 }

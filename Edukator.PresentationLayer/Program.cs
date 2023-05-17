@@ -4,6 +4,7 @@ using Edukator.DataAccessLayer.Abstract;
 using Edukator.DataAccessLayer.Concrete;
 using Edukator.DataAccessLayer.EntityFramework;
 using Edukator.EntityLayer.Concrete;
+using Edukator.PresentationLayer.Models;
 
 namespace Edukator.PresentationLayer
 {
@@ -36,7 +37,13 @@ namespace Edukator.PresentationLayer
             builder.Services.AddScoped<IServiceDAL, EFServiceDAL>();
             builder.Services.AddScoped<IServiceService, ServiceManager>();
 
-            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+			builder.Services.AddScoped<ISubscribeDAL, EFSubscribeDAL>();
+			builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
+
+            builder.Services.AddScoped<ICourseRegisterDAL, EFCourseRegisterDAL>();
+            builder.Services.AddScoped<ICourseRegisterService, CourseRegisterManager>();
+
+            builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

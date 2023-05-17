@@ -37,5 +37,10 @@ namespace Edukator.BussinessLayer.Concrete
         {
             _contactDAL.Update(entity);
         }
+
+        public List<Contact> TGetLastFourMessage()
+        {
+            return _contactDAL.GetLastFourMessage();
+        }
     }
 }

@@ -5,5 +5,6 @@ namespace Edukator.DataAccessLayer.Abstract
     public interface ICourseDAL : IGenericDAL<Course>
     {
         List<Course> GetCoursesWithCategory();
+        List<Course> GetLastFiveCourse();
     }
 }

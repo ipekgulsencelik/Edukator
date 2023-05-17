@@ -2,16 +2,17 @@
 using Edukator.DataAccessLayer.Concrete;
 using Edukator.DataAccessLayer.Repository;
 using Edukator.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 
 namespace Edukator.DataAccessLayer.EntityFramework
 {
-    public class EFContactDAL : GenericRepository<Contact>, IContactDAL
+    public class EFCourseRegisterDAL : GenericRepository<CourseRegister>, ICourseRegisterDAL
     {
-        public List<Contact> GetLastFourMessage()
+        public List<CourseRegister> CourseRegisterListWithCoursesAndUsers()
         {
             using var context = new Context();
 
-            var values = context.Contacts.OrderByDescending(x => x.ContactID).Take(4).ToList();
+            var values = context.CourseRegisters.Include(x => x.Course).Include(y => y.AppUser).ToList();
 
             return values;
         }
